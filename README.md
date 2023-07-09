@@ -1,5 +1,6 @@
 # iOS Test code
 iOS에서는 테스트 코드를 어떻게 작성할까요? 
+
 궁금증을 해결하기 위해 Unit Test에 대해 알아볼게요!
 
 다음의 코드를 참고하시면 좋아요.
@@ -39,6 +40,7 @@ struct Calculation {
 ```
 </br>
 calculationTip 안에 enteredAmount와 tip이 파라미터로 들어와요. 
+
 우리는 이 두 값이 변할 때 문제가 될만한 경우를 파악해서 test code를 작성할거에요. 
 
 
@@ -91,6 +93,7 @@ final class CalculationTests: XCTestCase {
 ```
 
 func testSuccessfulTipCalculation() 에서는 계산된 팁이 25인지 아닌지 판단해요. 
+
 만약 25라면 테스트를 통활 것이고, 아니라면 통과하지 못해요. 
 
 그런데 코딩을 하다가 누군가 Calculation struct 안에 있는 calculationTip 함수 내부에 guard enteredAmount >= 0 && tip >= 0 else { return nil } 부분을 주석처리 했다고 생각해보아요.
@@ -106,6 +109,7 @@ struct Calculation {
 }
 ```
 그렇다면 func testNegativeEnteredAmountTipCalculation() 에서 테스트를 통과하지 못해요. 
+
 왜냐하면 tip은 nil이 아닌 값을 반환하기 때문이에요.
 
 
