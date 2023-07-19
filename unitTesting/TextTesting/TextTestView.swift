@@ -8,10 +8,21 @@
 import SwiftUI
 
 struct TextTestView: View {
-    @StateObject private var vm = ViewModel()
-
+    @StateObject private var vm = ViewModel ()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            VStack(spacing: 20) {
+                Text ("\(vm.convertedText)")
+                    .font(.headline)
+                TextField("Enter a value.", text: $vm.text)
+                    .textFieldStyle(.roundedBorder)
+                    .keyboardType (.decimalPad)
+                    .submitLabel(.done)
+                Button("Convert", action: vm.convertMoney)
+                    .buttonStyle (.borderedProminent)
+            }
+            .padding()
+        }
     }
 }
 
