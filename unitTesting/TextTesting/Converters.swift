@@ -9,7 +9,7 @@ import Foundation
 
 class Converters {
     func convertKRWToUSD(KRW: String) -> String {
-    let usdRate = 1.08
+    let usdRate = 0.00079
     let KRWValue = Double(KRW) ?? 0
 
         if KRWValue <= 0 {
