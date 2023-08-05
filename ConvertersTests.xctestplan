@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "24E2CF57-E367-4DA9-9457-A3D33BE49856",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:unitTesting.xcodeproj",
+        "identifier" : "7CF208DD2A68457500B5D0AD",
+        "name" : "ConvertersTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TextTestView: View {
-    @StateObject private var vm = ViewModel ()
+    @StateObject private var vm = ViewModel()
     var body: some View {
         Form {
             VStack(spacing: 20) {
