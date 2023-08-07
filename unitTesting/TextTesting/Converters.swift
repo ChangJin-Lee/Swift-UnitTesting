@@ -13,10 +13,10 @@ class Converters {
     let KRWValue = Double(KRW) ?? 0
 
         if KRWValue <= 0 {
-            return "Please enter a positive number."
+            return "양수를 입력해주세요."
         }
-        if KRWValue >= 1_000_000 {
-            return "Value too big to convert!"
+        if KRWValue >= 1_000_000_000 {
+            return "너무 큰 수를 입력했어요!"
         }
         return "$\(String(format: "%.2f", KRWValue * usdRate))"
     }
