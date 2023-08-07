@@ -49,7 +49,7 @@ final class ConvertersTests: XCTestCase {
 
     func test_convert1055_returnErrorMessage() {
         let actual = sut.convertKRWToUSD(KRW: "1055")
-        let expected = "0.83345"
+        let expected = "$0.83"
 
         XCTAssertEqual(actual, expected)
     }
